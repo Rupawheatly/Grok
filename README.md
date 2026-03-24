@@ -41,7 +41,7 @@ from prior runs; seeds 3 and 4 are trained fresh.
 **Key result:** Seeds 3 and 4 both DNF → depth-8 grokks in 3/5 seeds.
 The non-monotonic depth relationship (depth-4 = 0/5, depth-8 = 3/5) is confirmed.
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~3 min.
+**Hardware:** T4 GPU, CUDA graphs. 
 
 ---
 
@@ -66,7 +66,7 @@ produced a misleading 2.18× gap.
 was a hyperparameter confound. The true gap at optimal λ each (from H4 Part C)
 is 1.90×.
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~12 min.
+**Hardware:** T4 GPU, CUDA graphs. 
 
 ---
 
@@ -94,7 +94,7 @@ Tests GELU, ReLU, and Tanh at two hyperparameter configurations:
 entirely (0/5). At Sweep B it wins by 4.32×. The activation–regularisation
 interaction is the paper's most novel empirical finding.
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~30 min.
+**Hardware:** T4 GPU, CUDA graphs. 
 
 ---
 
@@ -123,7 +123,7 @@ Three-part experiment:
 λ=2e-3 collapses MLP training entirely — a sharp Goldilocks cliff.
 The definitive architecture gap is **1.90×**, correcting H2's 1.11×.
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~65 min.
+**Hardware:** T4 GPU, CUDA graphs. 
 
 ---
 
@@ -156,7 +156,7 @@ Configurations:
 GELU and ReLU reach the threshold at identical values but GELU arrives 6.9×
 faster — activation controls *rate*, not *threshold*.
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~8 min.
+**Hardware:** T4 GPU, CUDA graphs.
 
 ---
 
@@ -208,7 +208,7 @@ multiplication, confirming task-independence. Both architectures are *faster*
 on multiplication than addition at optimal λ — Transformer benefits more
 (0.69× of its addition time vs 0.91× for MLP).
 
-**Hardware:** T4 GPU, CUDA graphs. Runtime ~25 min.
+**Hardware:** T4 GPU, CUDA graphs.
 
 ---
 
@@ -248,13 +248,13 @@ If reproducing from scratch, run in this order (each depends on the previous
 only for context, not for data):
 
 ```
-1. Exp_H1_Depth8_Complete.ipynb     (~3 min)
-2. Exp_H2_Corrected_Configs.ipynb   (~12 min)
-3. Exp_H3_Fixed_Baselines.ipynb     (~30 min)
-4. Exp_H4_WD_Sweep.ipynb            (~65 min)
-5. Exp_WeightNorm_Dynamics.ipynb    (~8 min)
-6. Exp_Fourier_Analysis.ipynb       (~5 min)
-7. Exp_Mod_Multiplication.ipynb     (~25 min)
+1. Exp_H1_Depth8_Complete.ipynb     
+2. Exp_H2_Corrected_Configs.ipynb   
+3. Exp_H3_Fixed_Baselines.ipynb    
+4. Exp_H4_WD_Sweep.ipynb            
+5. Exp_WeightNorm_Dynamics.ipynb    
+6. Exp_Fourier_Analysis.ipynb      
+7. Exp_Mod_Multiplication.ipynb    
 ```
 
-Total compute: approximately **2.5 hours** on a single T4 GPU.
+
